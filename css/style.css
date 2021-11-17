@@ -105,6 +105,8 @@ img.el-bg {
 .team img {
     filter: grayscale(100%);
     position: absolute;
+    transition: all .8s ease;
+    cursor: pointer;
 }
 .team img:hover {
     filter: none;
@@ -126,12 +128,12 @@ img.el-bg {
     z-index: 9;
 }
 .team img.team-cmo {
-    left: 560px;
+    left: 580px;
     width: 280px;
     bottom: -120px;
 }
 .team img.team-cfo {
-    right: 200px;
+    right: 150px;
     bottom: -100px;
 }
 
@@ -141,44 +143,48 @@ img.el-bg {
 
 @media screen 
   and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
+  and (max-device-width: 1600px)
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .team img.team-coo {
-        left: 0px;
+        left: -100px;
         z-index: 99;
         bottom: -100px;
     }
     .team img.team-cto {
-        left: 250px;
+        left: 150px;
         width: 300px;
         bottom: -80px;
     }
     .team img.team-ceo {
-        left: 380px;
+        left: 280px;
         width: 300px;
         bottom: -150px;
         z-index: 9;
     }
     .team img.team-cmo {
-        left: 560px;
+        left: 480px;
         width: 280px;
         bottom: -120px;
     }
     .team img.team-cfo {
-        right: 20px;
+        right: 50px;
         bottom: -100px;
     }
 }
 
-/* Portrait and Landscape */
+/* ipad pro */
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
     .team img.team-coo {
-        left: -150px;
+        left: -180px;
         z-index: 99;
         bottom: -100px;
     }
@@ -188,7 +194,7 @@ img.el-bg {
         bottom: -80px;
     }
     .team img.team-ceo {
-        left: 270px;
+        left: 250px;
         width: 300px;
         bottom: -150px;
         z-index: 9;
@@ -199,22 +205,118 @@ img.el-bg {
         bottom: -120px;
     }
     .team img.team-cfo {
-        right: -70px;
+        right: -80px;
         bottom: -100px;
     }
-    .team img {
-        display: none;
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .team img.team-coo {
+        left: -70px;
+        z-index: 99;
+        bottom: -100px;
     }
-    .team img.team-sm-screen {
-        display: block;
-        width: 100%;
+    .team img.team-cto {
+        left: 200px;
+        width: 300px;
+        bottom: -80px;
+    }
+    .team img.team-ceo {
+        left: 350px;
+        width: 300px;
+        bottom: -150px;
+        z-index: 9;
+    }
+    .team img.team-cmo {
+        left: 550px;
+        width: 280px;
+        bottom: -120px;
+    }
+    .team img.team-cfo {
+        right: 0px;
+        bottom: -100px;
     }
 }
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px) {
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+    .team img.team-coo {
+        left: -240px;
+        z-index: 99;
+        bottom: -100px;
+    }
+    .team img.team-cto {
+        left: 10px;
+        width: 300px;
+        bottom: -80px;
+    }
+    .team img.team-ceo {
+        left: 140px;
+        width: 300px;
+        bottom: -150px;
+        z-index: 9;
+    }
+    .team img.team-cmo {
+        left: 320px;
+        width: 280px;
+        bottom: -120px;
+    }
+    .team img.team-cfo {
+        right: -170px;
+        bottom: -100px;
+    }
+}
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .team img.team-coo {
+        left: -140px;
+        z-index: 99;
+        bottom: -100px;
+    }
+    .team img.team-cto {
+        left: 100px;
+        width: 300px;
+        bottom: -80px;
+    }
+    .team img.team-ceo {
+        left: 240px;
+        width: 300px;
+        bottom: -150px;
+        z-index: 9;
+    }
+    .team img.team-cmo {
+        left: 420px;
+        width: 280px;
+        bottom: -120px;
+    }
+    .team img.team-cfo {
+        right: -80px;
+        bottom: -100px;
+    }
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px)
+  and (orientation: portrait) 
+  and (max-device-width: 736px) {
     .team {
         height: 200px;
     }
@@ -223,8 +325,8 @@ img.el-bg {
     }
     .team img.team-sm-screen {
         display: block;
-        width: 400px;
-        margin-top: 20px;
+        width: 100%;
+        bottom: -50px;
     }
     .play-badge {
         width: 120px !important;
@@ -247,19 +349,69 @@ img.el-bg {
         margin-bottom: 20px;
     }
 }
-
 @media only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 640px) {
+  and (min-device-width: 320px)
+  and (orientation: landscape) 
+  and (max-device-width: 736px) {
     .team {
         height: 200px;
     }
     .team img {
-        display: none !important;
+        display: none;
     }
     .team img.team-sm-screen {
         display: block;
-        width: 400px;
-        margin-top: 20px;
+        width: 100%;
+        bottom: -120px;
+    }
+    .play-badge {
+        width: 120px !important;
+    }
+    .play-badge-2 {
+        width: 50px !important;
+    }
+    
+    .feature .feature-icon {
+        width: 60px;
+        height: 50px;
+        border-radius: 5px;    
+    }
+    .feature .feature-icon img {
+        width: 25px;
+        margin: 10px 7px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+    .team img.team-coo {
+        left: -240px;
+        z-index: 99;
+        bottom: -100px;
+    }
+    .team img.team-cto {
+        left: 10px;
+        width: 300px;
+        bottom: -80px;
+    }
+    .team img.team-ceo {
+        left: 140px;
+        width: 300px;
+        bottom: -150px;
+        z-index: 9;
+    }
+    .team img.team-cmo {
+        left: 320px;
+        width: 280px;
+        bottom: -120px;
+    }
+    .team img.team-cfo {
+        right: -170px;
+        bottom: -100px;
     }
 }
