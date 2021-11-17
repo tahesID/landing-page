@@ -243,3 +243,19 @@ img.el-bg {
         margin-bottom: 20px;
     }
 }
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px) {
+    .team {
+        height: 200px;
+    }
+    .team img {
+        display: none;
+    }
+    .team img.team-sm-screen {
+        display: block;
+        width: 400px;
+        margin-top: 20px;
+    }
+}
