@@ -54,6 +54,10 @@ header .fly-box {
     left: 50%;
     transform: translate(-50%,5%);
 }
+.feature-app {
+    width: 100%;
+    position: relative;
+}
 img.el-bg {
     position: absolute;
     width: 100%;
@@ -90,4 +94,152 @@ img.el-bg {
 }
 .feature .feature-title {
     padding: 15px;
+}
+
+.team {
+    position: relative;
+    display: block;
+    height: 400px;
+    width: 100%;
+}
+.team img {
+    filter: grayscale(100%);
+    position: absolute;
+}
+.team img:hover {
+    filter: none;
+}
+.team img.team-coo {
+    left: 0px;
+    z-index: 99;
+    bottom: -100px;
+}
+.team img.team-cto {
+    left: 250px;
+    width: 300px;
+    bottom: -80px;
+}
+.team img.team-ceo {
+    left: 380px;
+    width: 300px;
+    bottom: -150px;
+    z-index: 9;
+}
+.team img.team-cmo {
+    left: 560px;
+    width: 280px;
+    bottom: -120px;
+}
+.team img.team-cfo {
+    right: 200px;
+    bottom: -100px;
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .team img.team-coo {
+        left: 0px;
+        z-index: 99;
+        bottom: -100px;
+    }
+    .team img.team-cto {
+        left: 250px;
+        width: 300px;
+        bottom: -80px;
+    }
+    .team img.team-ceo {
+        left: 380px;
+        width: 300px;
+        bottom: -150px;
+        z-index: 9;
+    }
+    .team img.team-cmo {
+        left: 560px;
+        width: 280px;
+        bottom: -120px;
+    }
+    .team img.team-cfo {
+        right: 20px;
+        bottom: -100px;
+    }
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+    .team img.team-coo {
+        left: -150px;
+        z-index: 99;
+        bottom: -100px;
+    }
+    .team img.team-cto {
+        left: 100px;
+        width: 300px;
+        bottom: -80px;
+    }
+    .team img.team-ceo {
+        left: 270px;
+        width: 300px;
+        bottom: -150px;
+        z-index: 9;
+    }
+    .team img.team-cmo {
+        left: 450px;
+        width: 280px;
+        bottom: -120px;
+    }
+    .team img.team-cfo {
+        right: -70px;
+        bottom: -100px;
+    }
+    .team img {
+        display: none;
+    }
+    .team img.team-sm-screen {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+    .team {
+        height: 200px;
+    }
+    .team img {
+        display: none;
+    }
+    .team img.team-sm-screen {
+        display: block;
+        width: 400px;
+        margin-top: 20px;
+    }
+    .play-badge {
+        width: 120px !important;
+    }
+    .play-badge-2 {
+        width: 50px !important;
+    }
+    
+    .feature .feature-icon {
+        width: 60px;
+        height: 50px;
+        border-radius: 5px;    
+    }
+    .feature .feature-icon img {
+        width: 25px;
+        margin: 10px 7px;
+    }
+    .logo-default {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
 }
