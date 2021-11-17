@@ -251,7 +251,7 @@ img.el-bg {
         height: 200px;
     }
     .team img {
-        display: none;
+        display: none !important;
     }
     .team img.team-sm-screen {
         display: block;
